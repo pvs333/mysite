@@ -10,7 +10,7 @@ function Main() {
           I am a
           <RotatingText
             texts={['Developer', 'Designer', 'Student']}
-            style={{ color: "#1657abff" }} 
+            style={{ color: "#FD2A39" }} 
             mainClassName="px-2 sm:px-2 md:px-3 bg-cyan-300 text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
             staggerFrom={"last"}
             initial={{ y: "50%", opacity: 0 }}

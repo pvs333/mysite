@@ -1,13 +1,21 @@
-.navbar{
+
+.navbar {
+    padding: 10px 0;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-evenly;
-    padding: 20px 170px;
+    background-color: #ffbe54;
 }
-.nav-menu{
+
+/* Keep any existing styles you have for .nav-menu */
+.nav-menu {
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 60px;
+    gap: 60px; /* Example gap */
     font-size: 20px;
+}
+
+.logo {
+  padding-top: 25px;
 }

@@ -13,7 +13,7 @@ const NavBar = () => {
             <li>
                 Projects
             </li>
-            <text style={{fontFamily: 'BigFont', fontSize: '90px', color: '#A82B2B'}}>
+            <text style={{fontFamily: 'BigFont', fontSize: '90px', color: '#FD2A39'}} className={'logo'}>
                 VISWASURYA PALKUMAR
             </text>
             <li>
