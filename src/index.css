@@ -1,0 +1,17 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  height:100vh;
+  background:#fdffce;
+  color:#cd3a3b;
+  font-family:'Space Grotesk', sans-serif;
+
+}
+    @font-face {
+      font-family: 'BigFont'; /* Choose a descriptive name */
+      src: local('BigFont'), url('./assets/VALINGUAN CONDENSED.otf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
