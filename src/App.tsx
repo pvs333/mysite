@@ -1,9 +1,15 @@
-import React from 'react'
-import NavBar from './components/NavBar/NavBar'
-import Main from './components/Main/Main'
-import Waves from './components/WavesBg/Waves'
+
+import React, { useState } from 'react';
+import NavBar from './components/NavBar/NavBar';
+import Main from './components/Main/Main';
+import Waves from './components/WavesBg/Waves';
+import Projects from './components/Projects/projectsPage.tsx';
+
+
 
 const App = () => {
+  const [selectedSection, setSelectedSection] = useState('Main');
+
   return (
     <div style={{ position: 'relative', width: '100%', height: '100%' }}>
       <Waves
@@ -20,11 +26,12 @@ const App = () => {
         yGap={36}
       />
       <div style={{ position: 'relative', zIndex: 1 }}>
-        <NavBar/>
-        <Main/>
+        <NavBar onSectionSelect={setSelectedSection} />
+        {selectedSection === 'Main' && <Main />}
+        {selectedSection === 'Projects' && <Projects />}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
