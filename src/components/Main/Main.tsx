@@ -12,17 +12,22 @@ function Main() {
             GitHub
           </a>
         </li>
+        <li>|</li>
         <li>
           <a href="https://www.linkedin.com/in/viswasurya-palkumar/">
             LinkedIn
           </a>
         </li>
+        <li>|</li>
         <li>
           <a href="https://pvs333.itch.io/">
             itch.io
           </a>
         </li>
       </ul>
+      <text>
+        viswasuryapalkumar@gmail.com
+      </text>
     </div>
   )
 }
