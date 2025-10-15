@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './projectsPage.css';
 import Project from '../Project/project';
 

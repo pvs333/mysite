@@ -1,6 +1,5 @@
 import React from 'react';
 import './NavBar.css';
-import logo from '../../assets/logo.png';
 
 type NavBarProps = {
   onSectionSelect: (section: string) => void;
