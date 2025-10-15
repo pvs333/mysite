@@ -11,13 +11,10 @@ const NavBar: React.FC<NavBarProps> = ({ onSectionSelect }) => {
     <div className='navbar'>
       <ul className="nav-menu">
         <li onClick={() => onSectionSelect('Main')} style={{ cursor: 'pointer' }}>
-          Blog
+          Home
         </li>
         <li onClick={() => onSectionSelect('Projects')} style={{ cursor: 'pointer' }}>
           Projects
-        </li>
-        <li style={{ cursor: 'pointer' }}>
-          Designs
         </li>
       </ul>
     </div>
