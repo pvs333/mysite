@@ -4,6 +4,13 @@ import Project from '../Project/project';
 
 const projectsData = [
   {
+    imgSrc: '/src/assets/EDA.jpg',
+    name: 'Exploratory Data Analysis of the YouTube Trending Videos Dataset',
+    description: 'Exploratory Data Analysis project on YouTube Trending Videos Dataset using Python libraries such as Pandas, Matplotlib and Seaborn to derive insights and visualize trends in video popularity, categories, and viewer engagement over time.',
+    link: 'https://pvs333.github.io/YT-Trending-Analysis/',
+    type: 'Site',
+  },
+  {
     imgSrc: '/src/assets/MUL.jpg',
     name: 'Minesweeper Unlimited',
     description: 'The classic game rebuilt for Mobile devices featuring infinitely generating maps, dynamic themes, robust stats view and major QOL impovements',
