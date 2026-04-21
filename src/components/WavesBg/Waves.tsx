@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, type CSSProperties } from 'react';
-import './Waves.css';
+import './waves.css';
 
 class Grad {
   x: number;
