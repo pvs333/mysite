@@ -14,6 +14,7 @@ import segImg from '../../assets/SEG.jpg';
 import virusWarriorImg from '../../assets/VirusWarrior.png';
 import keyToLightImg from '../../assets/KeyToLight.png';
 import nemoImg from '../../assets/Nemo.png';
+import supergamesImg from '../../assets/SGWF.jpg';
 
 const projectsData = [
   {
@@ -99,6 +100,13 @@ const projectsData = [
     description: 'Made this to learn Godot Game Engine. A Flappy Bird Clone but with Two Controls.',
     link: 'https://pvs333.itch.io/floppy-nemo',
     type: 'itch.io',
+  },
+  {
+    imgSrc: supergamesImg,
+    name: 'Supergames Workforce Allocation Environment',
+    description: 'A reinforcement-learning environment made using OpenEnv showcased as a Hugging Face Space.',
+    link: 'https://huggingface.co/spaces/pvs333/supergames-env',
+    type: 'Hugging Face',
   },
 ];
 

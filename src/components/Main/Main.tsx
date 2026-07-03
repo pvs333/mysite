@@ -20,6 +20,12 @@ function Main() {
         </li>
         <li>|</li>
         <li>
+          <a href="https://huggingface.co/pvs333" target="_blank" rel="noopener noreferrer">
+            Hugging Face
+          </a>
+        </li>
+        <li>|</li>
+        <li>
           <a href="https://pvs333.itch.io/">
             itch.io
           </a>

@@ -2,15 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Viswasurya</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bokor&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <script>
+      (async () => {
+        if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
+          location.replace('/app.html')
+          return
+        }
+
+        const assetBase = 'https://cdn.jsdelivr.net/gh/pvs333/mysite@gh-pages/'
+        const response = await fetch(assetBase + 'index.html', { cache: 'no-store' })
+        const html = await response.text()
+        const documentFragment = new DOMParser().parseFromString(html, 'text/html')
+
+        documentFragment.querySelectorAll('link').forEach(link => {
+          const href = link.getAttribute('href')
+          if (!href) return
+          const clonedLink = document.createElement('link')
+          clonedLink.rel = link.getAttribute('rel') || 'stylesheet'
+          clonedLink.href = new URL(href, assetBase).href
+          if (link.getAttribute('crossorigin')) clonedLink.crossOrigin = link.getAttribute('crossorigin')
+          if (link.getAttribute('type')) clonedLink.type = link.getAttribute('type')
+          document.head.append(clonedLink)
+        })
+
+        const script = documentFragment.querySelector('script[type="module"]')
+        const scriptSrc = script?.getAttribute('src')
+        if (!scriptSrc) return
+
+        const moduleScript = document.createElement('script')
+        moduleScript.type = 'module'
+        moduleScript.src = new URL(scriptSrc, assetBase).href
+        moduleScript.crossOrigin = 'anonymous'
+        document.body.append(moduleScript)
+      })().catch(() => {
+        document.body.innerHTML = '<pre style="font-family: monospace; padding: 16px;">Failed to load the app.</pre>'
+      })
+    </script>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
